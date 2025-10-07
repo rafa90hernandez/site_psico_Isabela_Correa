@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicóloga Isabela Corrêa</title>
+</head>
+
+<body>
+<header>
+  <div class="branding">
+    <div class="logo">
+      <img src="imagens/logoPsiN.png" alt="Logo">
+    </div>
+
+  </div>
+
+  <!-- Ícone do menu -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- Menu móvel fora do header -->
+<nav class="menu-dropdown" id="menuNav">
+  <a href="#quemSou">Sobre mim</a>
+  <a href="#atendimento">Atendimento</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+
+    <main>
+        <section>
+            <article>
+                <q class="texto-posicionado">
+                   <p>
+                        "A curiosa contradição é que,<br>
+                        quando me aceito como sou,<br>
+                        então posso mudar."
+                    </p>
+                    <p>
+                        - Carlos R. Rogers
+                    </p>
+                </q>
+            </article>
+        </section>
+        <div id="quemSou">
+            <h1>Quem sou eu</h1>
+        </div>
+        <section class="sobre">
+            <p>
+                Olá, eu sou Isabela Corrêa, psicóloga clínica.
+                Sou formada pela Universidade Federal do Triângulo Mineiro (UFTM), mestre em Psicologia pela
+                Universidade de São Paulo (USP) e especialista em Saúde Mental.
+
+                Atuo como servidora pública e tenho mais de 7 anos de experiência clínica. Também ofereço supervisão
+                clínica e cursos para psicólogos.
+
+                Ao longo da minha trajetória, venho me especializando no atendimento de casos envolvendo ansiedade,
+                depressão, TDAH, uso de substâncias, traumas e outros sofrimentos psíquicos que impactam
+                significativamente a vida das pessoas.
+
+                Realizei diversos cursos de aperfeiçoamento em universidades renomadas, no Brasil e no exterior, e sigo
+                em constante atualização.
+            </p>
+            <picture>
+                <source media="(max-width: 900px)" srcset="imagens/perfilm.png" type="image/png">
+                <img src="imagens/perfilg.png" alt="Foto da Isabela sorrindo em uma praça.">
+            </picture>
+        </section>
+
+        <section id="atendimento">
+            <h2>Atendimento</h2>
+            <div class="container">
+                <div class="box">
+                    <div class="topo-box">
+                        <img src="imagens/online.png" alt="Imagem de um computador com o planeta na tela.">
+                        <h3>ON-LINE</h3>
+                    </div>
+                    <p>A terapia online é uma forma prática e acessível de cuidar da saúde emocional. Com conforto e
+                        flexibilidade, você pode fazer sessões de onde estiver, sem precisar se deslocar, economizando
+                        tempo e dinheiro. Além disso, garante privacidade, acolhimento e se adapta facilmente à sua
+                        rotina, facilitando a continuidade do cuidado psicológico e pensando sempre na qualidade de
+                        vida.</p>
+                </div>
+
+                <div class="box">
+                    <div class="topo-box">
+                        <img src="imagens/healthcare.png"
+                            alt="Imagem de duas mãos segurando um coração com o símbolo da cruz.">
+                        <h3>BENEFÍCIOS</h3>
+                    </div>
+                    <ul type="none">
+                        <li><strong>Autoconhecimento</strong> – Entender melhor seus sentimentos e comportamentos.</li>
+                        <li><strong>Gestão emocional</strong> – Aprender a lidar com ansiedade, estresse e conflitos.
+                        </li>
+                        <li><strong>Melhora nos relacionamentos</strong> – Desenvolver habilidades de comunicação e
+                            empatia.</li>
+                        <li><strong>Tomada de decisões</strong> – Ter mais clareza e segurança nas escolhas da vida.
+                        </li>
+                        <li><strong>Bem-estar emocional</strong> – Promover equilíbrio, autoestima e qualidade de vida.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <div class="topo-box">
+                        <img src="imagens/arvore.png"
+                            alt="Imagem de duas mãos segurando um coração com o símbolo da cruz.">
+                        <h3>AUTOCUIDADO</h3>
+                    </div>
+                    <p>Cuidar da saúde emocional é um gesto de coragem e carinho com você mesma. Se você sente que é
+                        hora de olhar para dentro, se escutar e se fortalecer, estou aqui para te acompanhar nesse
+                        caminho. Agende seu atendimento e vamos juntas nessa jornada de autoconhecimento, acolhimento e
+                        transformação.</p>
+                </div>
+            </div>
+
+
+        </section>
+        <section id="contato">
+            <h2>Agende uma consulta</h2>
+            <div class="divContatos icones-contato">
+                <a href="https://wa.me/5534999942302?text=Olá%2C+gostaria+de+saber+mais+sobre+a+consulta!"
+                    target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/whatsapp.png" alt="Ícone do Whatsapp">
+                </a>
+                <a href="https://www.instagram.com/psicoisabelacorrea/" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/instagram.png" alt="Ícone do Instagram">
+                </a>
+                <a href="mailto:isabela.correa@usp.br?subject=Agendamento%20de%20sessão">
+                    <img src="imagens/e-mail.png" alt="Ícone do E-mail">
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p><strong>Isabela Corrêa</strong> | Todos os direitos reservados</p>
+        <p>Desenvolvido por <a href="https://github.com/rafa90hernandez" target="_blank" rel="noopener noreferrer"
+                class="link"><strong>Rafael Hernandez</strong></a></p>
+    </footer>
+    <button id="btnTopo" onclick="voltarAoTopo()"> ↑ </button>
+    <script>
+        window.onscroll = function () {
+            const btn = document.getElementById("btnTopo");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+        function voltarAoTopo() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('menuNav');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+</html>

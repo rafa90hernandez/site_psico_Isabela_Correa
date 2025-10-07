@@ -11,40 +11,43 @@
 </head>
 
 <body>
-<header>
-  <div class="branding">
-    <div class="logo">
-      <img src="imagens/logoPsiN.png" alt="Logo">
-    </div>
+    <header>
+        <div class="branding">
+            <div class="logo">
+                <img src="imagens/logoPsiN.png" alt="Logo">
+            </div>
 
-  </div>
+        </div>
 
-  <!-- Ícone do menu -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-</header>
+        <!-- Ícone do menu -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </header>
 
-<!-- Menu móvel fora do header -->
-<nav class="menu-dropdown" id="menuNav">
-  <a href="#quemSou">Sobre mim</a>
-  <a href="#atendimento">Atendimento</a>
-  <a href="#contato">Contato</a>
-</nav>
+    <!-- Menu móvel fora do header -->
+    <nav class="menu-dropdown" id="menuNav">
+        <a href="#quemSou">Sobre mim</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#contato">Contato</a>
+    </nav>
 
 
     <main>
-        <section>
-            <article>
-                <q class="texto-posicionado">
-                   <p>
-                        "A curiosa contradição é que,<br>
-                        quando me aceito como sou,<br>
-                        então posso mudar."
-                    </p>
+        <section class="hero-split" id="sobre">
+            <div class="panel text-panel">
+                <div class="text-box">
                     <p>
-                        - Carlos R. Rogers
+                        “Cuidar da saúde mental é um gesto de coragem, carinho e, sobretudo,
+                        autocuidado. Na terapia comigo, você encontrará um espaço para acolher
+                        dores, repensar caminhos, reconhecer forças e criar novas possibilidades.
+                        Se você busca um lugar onde possa falar com liberdade, com escuta e manejo
+                        clínico qualificados, conte comigo.”
                     </p>
-                </q>
-            </article>
+                </div>
+            </div>
+
+            <div class="panel img-panel">
+                <img src="./imagens/isaa.png" alt="Psicóloga sorrindo">
+            </div>
         </section>
         <div id="quemSou">
             <h1>Quem sou eu</h1>
@@ -160,6 +163,26 @@
             const menu = document.getElementById('menuNav');
             menu.classList.toggle('show');
         }
+
+        <!-- JS: ativa a classe .in-view quando a seção aparece -->
+
+        (function () {
+            const section = document.querySelector('.hero-split');
+            if (!('IntersectionObserver' in window) || !section) {
+                // fallback: sem IO, mostra direto
+                section.classList.add('in-view');
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        section.classList.add('in-view');
+                        io.disconnect(); // anima só uma vez
+                    }
+                });
+            }, { threshold: 0.25 });
+            io.observe(section);
+        })();
     </script>
 
 </body>

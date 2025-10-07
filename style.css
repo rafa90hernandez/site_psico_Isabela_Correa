@@ -15,7 +15,7 @@
 
 body {
     overflow-x: hidden;
-
+    background-color: rgba(244, 148, 226, 0.08);
 }
 
 header {
@@ -24,21 +24,12 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0px 0px;
-    background-color: rgba(224, 216, 221, 0.208);
+    background-color:#fdf3fa;
     flex-wrap: wrap;
 }
 
-header .branding {
-    font-family: var(--font1);
-    font-weight: 100px;
-    font-size: clamp(1.4rem, 2vw, 2rem);
-    color: #B22D93;
-    text-align: center;
-    text-shadow: 5px 5px 5px #b22d932c;
-}
-
 .logo>img {
-    width: 300px;
+    width: 250px;
     height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -46,7 +37,7 @@ header .branding {
 
 .hamburger {
     display: block;
-    font-size: 40px;
+    font-size: 35px;
     color: #B22D93;
     cursor: pointer;
     padding: 10px;
@@ -56,17 +47,14 @@ header .branding {
     z-index: 1001;
 }
 
-
-
-
 /* Menu dropdown fora do header */
 .menu-dropdown {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.6s ease;
-    background-color: rgba(224, 216, 221, 0.208);
+    background-color: #fdf3fa;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,7 +65,8 @@ header .branding {
 .menu-dropdown a {
     padding: 15px;
     text-align: center;
-    font-size: 1.1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.9em;
     color: #B22D93;
     text-decoration: none;
     width: 100%;
@@ -85,15 +74,14 @@ header .branding {
 }
 
 .menu-dropdown a:hover {
-    background-color: rgba(250, 182, 225, 0.223);
-    color: #912377;
+    color: #921475;
+    font-size: 1em;
 }
 
 .menu-dropdown.show {
     max-height: 500px;
     margin: 0px;
     transition: max-height 0.6s ease;
-    /* ajuste conforme o conteúdo */
 }
 
 
@@ -118,18 +106,105 @@ header>nav a:hover {
 }
 
 article {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url('imagens/imgisa.png');
-  background-position: center;
-  background-size: contain;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  text-shadow: 2px 2px 2px rgb(0, 0, 0);
-  font-size: clamp(1rem, 3vw, 1.8rem);
-  opacity: 70%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(244, 148, 226, 0.08);
 }
+
+.hero-split {
+  --bg: #fdf3fa;
+  --box: #f8d4edbc;
+  --radius:  0px 12px 12px 0px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: var(--bg);
+  min-height: 70vh;
+  overflow: hidden;
+  padding-right: 5vw;
+  padding-left: 0;  
+}
+
+/* ===== TEXT ===== */
+.text-panel {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* cola na esquerda */
+  align-items: center;
+}
+
+.text-box {
+  background: var(--box);
+  padding: 40px 60px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  max-width: 600px;
+  margin-left: 0; /* garante que encoste */
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  color: #1f1f1f;
+}
+
+/* ===== IMAGE ===== */
+.img-panel {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* joga pra direita */
+  align-items: flex-end;
+}
+
+.img-panel img {
+  display: block;           /* elimina espaço de linha */
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+
+/* ===== ANIMATION ===== */
+.text-panel,
+.img-panel {
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.22, 0.9, 0.22, 1),
+              opacity 0.8s ease;
+}
+
+.text-panel { transform: translateX(-80px); }
+.img-panel { transform: translateX(80px); }
+
+.hero-split.in-view .text-panel,
+.hero-split.in-view .img-panel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-split.in-view .img-panel { transition-delay: 0.15s; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .hero-split {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .text-panel, .img-panel {
+    justify-content: center;
+    text-align: center;
+    transform: translateY(20px);
+  }
+
+  .hero-split.in-view .text-panel,
+  .hero-split.in-view .img-panel {
+    transform: translateY(0);
+  }
+
+  .text-box {
+    margin: 0 auto 30px;
+  }
+}
+
 
 
 .texto-posicionado {
@@ -424,7 +499,7 @@ article {
     text-align: center;
     font-size: clamp(1.2rem, 4vw, 2rem);
     max-width: 90%;
-  }
+}
 
 .sobre {
     flex-direction: column-reverse;
@@ -494,4 +569,3 @@ article {
 footer {
     padding: 10px;
 }
-

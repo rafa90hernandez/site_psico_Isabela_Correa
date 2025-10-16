@@ -211,7 +211,7 @@ header{
 .card{
   background:#fff; border-radius:40px; box-shadow:0 10px 30px rgba(0,0,0,.15);
   padding: clamp(22px,2.8vw,28px);
-  height:480px; width:440px;
+  height:450px; width:440px;
   display:flex; flex-direction:column; justify-content:flex-start; align-items:stretch;
   gap: clamp(12px,1.6vw,18px);
   opacity:0; will-change: transform, opacity;
@@ -431,10 +431,11 @@ footer p, footer a{ margin:0; text-decoration:none; color:#fff; }
     justify-items: center;           /* centraliza a coluna */
   }
   .card{
-    width: 100%;
-    max-width: 680px;
+    width: 85%;
+    max-width: 540px;
     height: auto;                    /* deixa crescer conforme o texto */
     padding: 20px;
+    margin: 0 auto; 
   }
   .card-head{ min-height: 56px; }
   .card-icon{ width: clamp(36px, 10vw, 64px); margin: 0; }

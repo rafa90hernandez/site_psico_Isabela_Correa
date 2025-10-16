@@ -339,7 +339,7 @@ footer p, footer a{ margin:0; text-decoration:none; color:#fff; }
   cursor:pointer; box-shadow:0 4px 6px rgba(0,0,0,.3);
   display:none; transition:.3s;
 }
-#btnTopo:hover{ background-color:#912377; }
+#btnTopo:hover{ background-color:#912377b3; }
 
 /* Botão flutuante WhatsApp (direita) */
 .whatsapp-float{

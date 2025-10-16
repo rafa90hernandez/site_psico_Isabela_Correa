@@ -1,351 +1,374 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicóloga Isabela Corrêa</title>
+  <meta charset="UTF-8" />
+  <!-- Viewport (removida duplicidade) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Psicóloga Isabela Corrêa</title>
 </head>
 
 <body>
-    <header>
-        <div class="branding">
-            <div class="logo">
-                <img src="imagens/logoPsiN.png" alt="Logo">
-            </div>
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+  <header>
+    <div class="branding">
+      <div class="logo">
+        <img src="imagens/logoPsiN.png" alt="Logotipo da Psicóloga Isabela Corrêa" />
+      </div>
+    </div>
 
+    <!-- Ícone/menu mobile (agora button para acessibilidade) -->
+    <button
+      class="hamburger"
+      aria-label="Abrir/fechar menu"
+      aria-controls="menuNav"
+      aria-expanded="false"
+      onclick="toggleMenu(this)"
+    >
+      ☰
+    </button>
+  </header>
+
+  <!-- Menu móvel fora do header (mantido) -->
+  <nav class="menu-dropdown" id="menuNav" aria-label="Menu principal">
+    <a href="#sobreMim">Sobre mim</a>
+    <a href="#como-trabalho">Como trabalho</a>
+    <a href="#servicos">Informações</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <!-- =========================================================
+       MAIN
+       ========================================================= -->
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero-split" id="sobre" aria-labelledby="hero-texto">
+      <div class="panel text-panel">
+        <div class="text-box" id="hero-texto">
+          <p>
+            “Cuidar da saúde mental é um gesto de coragem, carinho e, sobretudo, autocuidado.
+            Na terapia comigo, você encontrará um espaço para acolher dores, repensar caminhos,
+            reconhecer forças e criar novas possibilidades.
+            Se você busca um lugar onde possa falar com liberdade, com escuta e manejo clínico
+            qualificados, conte comigo.”
+          </p>
+        </div>
+      </div>
+
+      <div class="panel img-panel">
+        <img src="imagens/isaa.png" alt="Psicóloga sorrindo" />
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE MIM ===================== -->
+    <section class="about-split" id="sobre-mim" aria-labelledby="sobreMim">
+      <div class="panel img-panel2">
+        <img src="imagens/isaformada.jpg" alt="Isabela Corrêa em sua formatura" />
+      </div>
+
+      <div class="panel text-panel2">
+        <div class="about-stack">
+          <h2 class="about-title" id="sobreMim">Sobre mim</h2>
+
+          <div class="about-box">
+            <p>Olá, eu sou Isabela Corrêa, psicóloga clínica.</p>
+            <p>
+              Sou formada pela Universidade Federal do Triângulo Mineiro (UFTM),
+              mestre em Psicologia pela Universidade de São Paulo (USP) e especialista em Saúde Mental.
+            </p>
+            <p>
+              Atuo como servidora pública e tenho mais de 7 anos de experiência clínica. Também ofereço
+              supervisão clínica e cursos para psicólogos.
+            </p>
+            <p>
+              Ao longo da minha trajetória, venho me especializando no atendimento de casos envolvendo
+              ansiedade, depressão, TDAH, uso de substâncias, traumas e outros sofrimentos psíquicos que
+              impactam significativamente a vida das pessoas.
+            </p>
+            <p>
+              Realizei diversos cursos de aperfeiçoamento em universidades renomadas, no Brasil e no exterior,
+              e sigo em constante atualização.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMO TRABALHO ===================== -->
+    <section class="work-split" id="como-trabalho" aria-labelledby="como-trabalho-titulo">
+      <div class="panel text-panel3">
+        <div class="work-stack">
+          <h2 class="work-title" id="como-trabalho-titulo">Como trabalho</h2>
+
+          <div class="work-box">
+            <p>
+              A forma como nos percebemos e compreendemos o mundo é construída nas relações que vivemos e
+              nas histórias que contamos sobre elas. Essas narrativas moldam o que enxergamos como
+              problema, possibilidade ou escolha.
+            </p>
+            <p>
+              Na terapia, construímos juntas(os) um espaço de reflexão, cuidado e transformação — um tempo
+              para descobrir sentidos, abrir caminhos e fortalecer recursos internos, respeitando quem
+              você é e o que deseja construir para si.
+            </p>
+            <p>
+              Ofereço um ambiente ético, seguro e acolhedor, onde você possa se sentir ouvida(o),
+              compreendida(o), respeitada(o) e valorizada(o). Vamos pensar, juntas(os), em formas mais
+              gentis e criativas de lidar com os desafios, sempre com atenção à sua história, aos seus
+              valores e desejos.
+            </p>
+            <p>
+              Nosso trabalho tem como objetivo fortalecer sua autonomia, ampliar possibilidades e promover
+              escolhas alinhadas à sua singularidade e ao que dá sentido à sua vida.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel img-panel3">
+        <img src="imagens/perfilg.png" alt="Retrato da Isabela sorrindo" />
+      </div>
+    </section>
+
+    <!-- ===================== CARDS/ SERVIÇOS ===================== -->
+    <section class="cards-split" id="servicos" aria-label="Serviços e informações">
+      <!-- CARD 1 (topo-esquerda) -->
+      <article class="card move-left">
+        <header class="card-head">
+          <img src="imagens/diva.png" class="card-icon" alt="" aria-hidden="true" />
+          <h3 class="card-title">Quem atendo?</h3>
+        </header>
+
+        <div class="card-body">
+          <p>🖥️ Atendimentos individuais online</p>
+          <p>🌎 Em português, inglês e espanhol</p>
+
+          <p><strong>Público-alvo:</strong></p>
+          <ul>
+            <li>Adolescentes e adultos</li>
+            <li>Mulheres em diferentes fases da vida</li>
+            <li>Pessoas LGBTQIAP+</li>
+          </ul>
+
+          <p><strong>Também ofereço:</strong></p>
+          <ul>
+            <li>Atendimento a casais</li>
+            <li>Grupos terapêuticos</li>
+            <li>Palestras e ações em saúde mental</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- CARD 2 (topo-direita) -->
+      <article class="card move-left">
+        <header class="card-head">
+          <img src="imagens/atendimento-ao-cliente.png" class="card-icon" alt="" aria-hidden="true" />
+          <h3 class="card-title">Atendimento <br />online</h3>
+        </header>
+
+        <div class="card-body">
+          <p>
+            A terapia online é uma forma prática, acessível e segura de cuidar da saúde emocional.
+            Você pode realizar as sessões de onde estiver, com mais conforto, privacidade e economia de tempo.
+          </p>
+          <p>
+            A flexibilidade também favorece a continuidade do cuidado psicológico, adaptando-se melhor à sua rotina.
+          </p>
+        </div>
+      </article>
+
+      <!-- CARD 3 (baixo-esquerda) -->
+      <article class="card move-right">
+        <header class="card-head">
+          <img src="imagens/cuidados-de-saude.png" class="card-icon" alt="" aria-hidden="true" />
+          <h3 class="card-title">Benefícios da <br />terapia</h3>
+        </header>
+
+        <div class="card-body">
+          <ul>
+            <li>Autoconhecimento: entender melhor seus sentimentos e comportamentos.</li>
+            <li>Regulação emocional: lidar com ansiedade, estresse e conflitos.</li>
+            <li>Melhora nos relacionamentos: desenvolver habilidades de comunicação.</li>
+            <li>Bem-estar emocional: promover equilíbrio, autoestima e qualidade de vida.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- CARD 4 (baixo-direita) -->
+      <article class="card move-right">
+        <header class="card-head">
+          <img src="imagens/servicos-publicos.png" class="card-icon" alt="" aria-hidden="true" />
+          <h3 class="card-title">Convido você <br />ao tratamento</h3>
+        </header>
+
+        <div class="card-body">
+          <p>Cuidar da saúde mental é um gesto de coragem, carinho e, sobretudo, autocuidado.</p>
+          <p>
+            Na terapia comigo, você encontrará um espaço para acolher dores, repensar caminhos, reconhecer
+            forças e criar novas possibilidades.
+          </p>
+          <p>
+            Se você busca um lugar onde possa falar com liberdade, com escuta e manejo clínico qualificados,
+            conte comigo.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== INSTAGRAM ===================== -->
+    <section class="insta-section" id="instagram" aria-labelledby="instagram-titulo">
+      <div class="insta-header">
+        <img src="imagens/instagram.png" alt="" class="insta-icon" aria-hidden="true" />
+        <h2 class="insta-title" id="instagram-titulo">Instagram</h2>
+      </div>
+
+      <div class="insta-content">
+        <a
+          href="https://www.instagram.com/psicoisabelacorrea/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="insta-link"
+          aria-label="Abrir perfil no Instagram"
+        >
+          <img
+            src="imagens/instaIsa.png"
+            alt="Prévia do perfil no Instagram de Isabela Corrêa"
+            class="insta-image"
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section class="contact-section" id="contato" aria-labelledby="contato-titulo">
+      <div class="contact-wrapper">
+        <!-- Cabeçalho central que invade a faixa -->
+        <div class="contact-head">
+          <img src="imagens/contact-information.png" alt="" class="contact-icon" aria-hidden="true" />
+          <h2 class="contact-title" id="contato-titulo">Entre em contato</h2>
         </div>
 
-        <!-- Ícone do menu -->
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </header>
+        <!-- Faixa escura full-bleed (ícones clicáveis) -->
+        <div class="contact-band">
+          <a
+            class="contact-item"
+            href="https://wa.me/5534999942302?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Falar no WhatsApp"
+          >
+            <img src="imagens/whatsapp.png" alt="" class="contact-img" aria-hidden="true" />
+            <span>WhatsApp</span>
+          </a>
 
-    <!-- Menu móvel fora do header -->
-    <nav class="menu-dropdown" id="menuNav">
-        <a href="#sobreMim">Sobre mim</a>
-        <a href="#atendimento">Atendimento</a>
-        <a href="#contato">Contato</a>
-    </nav>
+          <a
+            class="contact-item"
+            href="mailto:isabela-correa@ups.br?subject=Contato%20pelo%20site&body=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
+            aria-label="Enviar e-mail"
+          >
+            <img src="imagens/e-mail.png" alt="" class="contact-img" aria-hidden="true" />
+            <span>E-mail</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer>
+    <p>Psicóloga Isabela Corrêa | CRM 06/178273 | Todos os direitos reservados ©</p>
+    <p>
+      Desenvolvido por
+      <a
+        href="https://github.com/rafa90hernandez"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link"
+      ><strong>Rafael Hernandez</strong></a>
+    </p>
+  </footer>
 
-    <main>
-        <section class="hero-split" id="sobre">
-            <div class="panel text-panel">
-                <div class="text-box">
-                    <p>
-                        “Cuidar da saúde mental é um gesto de coragem, carinho e, sobretudo,autocuidado. <br>
-                        Na terapia comigo, você encontrará um espaço para acolher
-                        dores, repensar caminhos, reconhecer forças e criar novas possibilidades. <br>
-                        Se você busca um lugar onde possa falar com liberdade, com escuta e manejo
-                        clínico qualificados, conte comigo.”
-                    </p>
-                </div>
-            </div>
-            <div class="panel img-panel">
-                <img src="./imagens/isaa.png" alt="Psicóloga sorrindo">
-            </div>
-        </section>
+  <!-- Botão "voltar ao topo" -->
+  <button id="btnTopo" type="button" aria-label="Voltar ao topo" onclick="voltarAoTopo()">↑</button>
 
-        <section class="about-split" id="sobre-mim">
-            <div class="panel img-panel2">
-                <img src="imagens/isaformada.jpg" alt="Foto de formatura da Isabela Corrêa">
-            </div>
+  <!-- Botão flutuante do WhatsApp (canto direito) -->
+  <a
+    href="https://wa.me/5534999942302?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Agendar consulta pelo WhatsApp"
+  >
+    <img src="imagens/whatsapp.png" alt="" />
+    <span>Agende uma consulta</span>
+  </a>
 
-            <div class="panel text-panel2">
-                <div class="about-stack">
-                    <h2 class="about-title" id="sobreMim">Sobre mim</h2>
-                    <div class="about-box">
-                        <p>Olá, eu sou Isabela Corrêa, psicóloga clínica.</p>
-                        <p>Sou formada pela Universidade Federal do
-                            Triângulo Mineiro (UFTM),
-                            mestre em Psicologia pela Universidade de São Paulo (USP) e especialista em Saúde Mental.
-                        </p><br>
-                        <p>Atuo como servidora pública e tenho mais de 7 anos de experiência clínica. Também ofereço
-                            supervisão clínica
-                            e cursos para psicólogos.</p><br>
-                        <p>Ao longo da minha trajetória, venho me especializando no atendimento de casos envolvendo
-                            ansiedade, depressão,
-                            TDAH, uso de substâncias, traumas e outros sofrimentos psíquicos que impactam
-                            significativamente a vida das pessoas.</p><br>
-                        <p>Realizei diversos cursos de aperfeiçoamento em universidades renomadas, no Brasil e no
-                            exterior, e sigo
-                            em constante atualização.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- =========================================================
+       SCRIPTS
+       - Toggle do menu mobile
+       - Botão voltar ao topo
+       - IntersectionObserver (genérico para várias sections)
+       ========================================================= -->
+  <script>
+    // Toggle do menu mobile
+    function toggleMenu(btn) {
+      const menu = document.getElementById('menuNav');
+      const opened = menu.classList.toggle('show');
+      if (btn) btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+    }
 
-        <section class="work-split" id="como-trabalho">
-            <div class="panel text-panel3">
-                <div class="work-stack">
-                    <h2 class="work-title">Como trabalho</h2>
-                    <div class="work-box">
-                        <p>A forma como nos percebemos e compreendemos o mundo é construída nas relações que vivemos e
-                            nas histórias que contamos sobre elas. Essas narrativas moldam o que enxergamos como
-                            problema, possibilidade ou escolha.</p>
-                        <br>
-                        <p>Na terapia, construímos juntas(os) um espaço de reflexão, cuidado e transformação — um tempo
-                            para descobrir sentidos, abrir caminhos e fortalecer recursos internos, respeitando quem
-                            você é e o que deseja construir para si.</p>
-                        <br>
-                        <p>Ofereço um ambiente ético, seguro e acolhedor, onde você possa se sentir ouvida(o),
-                            compreendida(o), respeitada(o) e valorizada(o). Vamos pensar, juntas(os), em formas mais
-                            gentis e criativas de lidar com os desafios, sempre com atenção à sua história, aos seus
-                            valores e desejos.</p>
-                        <br>
-                        <p>Nosso trabalho tem como objetivo fortalecer sua autonomia, ampliar possibilidades e promover
-                            escolhas alinhadas à sua singularidade e ao que dá sentido à sua vida.</p>
-                    </div>
-                </div>
-            </div>
+    // Mostrar/ocultar botão "voltar ao topo"
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('btnTopo');
+      const scrolled = document.body.scrollTop > 300 || document.documentElement.scrollTop > 300;
+      btn.style.display = scrolled ? 'block' : 'none';
+    });
 
-            <div class="panel img-panel3">
-                <img src="imagens/perfilg.png" alt="Isabela sorrindo">
-            </div>
-        </section>
+    function voltarAoTopo() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-        <section class="cards-split" id="servicos">
-            <!-- CARD 1 (topo-esquerda) -->
-            <article class="card move-left">
-                <header class="card-head">
-                    <img src="imagens/diva.png" alt="Desenho de um divã" class="card-icon">
-                    <h3 class="card-title">Quem atendo?</h3>
-                </header>
-                <div class="card-body">
-                    <p>🖥️Atendimentos individuais online</p>
-                    <p>🌎Em português, inglês e espanhol</p>
-                    <br>
-                    <p><strong>Público-alvo:</strong></p>
-                    <ul>
-                        <li>Adolescentes e adultos</li>
-                        <li>Mulheres em diferentes fases da vida</li>
-                        <li>Pessoas LGBTQIAP+</li>
-                    </ul>
-                    <br>
-                    <p><strong>Também ofereço:</strong></p>
-                    <ul>
-                        <li>Atendimento a casais</li>
-                        <li>Grupos terapêuticos </li>
-                        <li>Palestras e ações em saúde mental</li>
-                    </ul>
-                </div>
-            </article>
+    // Helper: observa uma lista de seletores e adiciona .in-view ao entrar na viewport
+    (function observeSections() {
+      const selectors = [
+        '.hero-split',
+        '.about-split',
+        '.work-split',
+        '.cards-split',
+        '.insta-section',
+        '.contact-section'
+      ];
 
-            <!-- CARD 2 (topo-direita) -->
-            <article class="card move-left">
-                <header class="card-head">
-                    <img src="imagens/atendimento-ao-cliente.png" alt="Desenho de uma mulher atendente"
-                        class="card-icon">
-                    <h3 class="card-title">Atendimento <br> online</h3>
-                </header>
-                <div class="card-body">
-                    <p>A terapia online é uma forma prática, acessível e segura de cuidar da saúde emocional. <br>
-                        Você pode realizar as sessões de onde você estiver, com mais conforto, privacidade e economia de
-                        tempo.</p>
-                    <p>A flexibilidade também favorece a continuidade do cuidado psicológico, adaptando-se melhor à sua
-                        rotina.</p>
-                </div>
-            </article>
+      if (!('IntersectionObserver' in window)) {
+        // Fallback: sem suporte, libera tudo
+        selectors.forEach(sel => {
+          const el = document.querySelector(sel);
+          if (el) el.classList.add('in-view');
+        });
+        return;
+      }
 
-            <!-- CARD 3 (baixo-esquerda) -->
-            <article class="card move-right">
-                <header class="card-head">
-                    <img src="imagens/cuidados-de-saude.png"
-                        alt="Desenho de uma mão segurando um coração com a linha de batimentos cardíacos"
-                        class="card-icon">
-                    <h3 class="card-title">Benefícios da <br> terapia</h3>
-                </header>
-                <div class="card-body">
-                    <ul>
-                        <li>Autoconhecimento: Entender melhor seus sentimentos e comportamentos.</li>
-                        <br>
-                        <li>Regulação emocional: Lidar com ansiedade, estresse e conflitos.</li>
-                        <br>
-                        <li>Melhora nos relacionamentos: Desenvolver habilidades de comunicação.</li>
-                        <br>
-                        <li>Bem-estar emocional: Promover equilíbrio, autoestima e qualidade de vida.</li>
-                    </ul>
-                </div>
-            </article>
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in-view');
+            io.unobserve(e.target); // anima cada uma apenas 1 vez
+          }
+        });
+      }, { threshold: 0.25 });
 
-            <!-- CARD 4 (baixo-direita) -->
-            <article class="card move-right">
-                <header class="card-head">
-                    <img src="imagens/servicos-publicos.png"
-                        alt="Desenho de duas mãos segurando um coração com pessoas dentro" class="card-icon">
-                    <h3 class="card-title">Convido você <br> ao tratamento</h3>
-                </header>
-                <div class="card-body">
-                    <p>Cuidar da saúde mental é um gesto de coragem, carinho e, sobretudo, autocuidado.</p>
-                    <p>Na terapia comigo, você encontrará um espaço para acolher dores, repensar caminhos, reconhecer
-                        forças e criar novas possibilidades.</p><br>
-                    <p>Se você busca um lugar onde possa falar com liberdade, com escuta e manejo clínico qualificados,
-                        conte comigo.</p>
-                </div>
-            </article>
-        </section>
-
-        <section class="insta-section" id="instagram">
-            <div class="insta-header">
-                <img src="imagens/instagram.png" alt="Ícone Instagram" class="insta-icon">
-                <h2 class="insta-title">Instagram</h2>
-            </div>
-
-            <div class="insta-content">
-                <a href="https://www.instagram.com/psicoisabelacorrea/" target="_blank" rel="noopener noreferrer"
-                    class="insta-link">
-                    <img src="imagens/instaIsa.png" alt="Perfil do Instagram da Psicóloga Isabela Corrêa"
-                        class="insta-image">
-                </a>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contato">
-            <div class="contact-wrapper">
-                <!-- Cabeçalho central (invadindo a faixa) -->
-                <div class="contact-head">
-                    <img src="imagens/contact-information.png" alt="Imagem celular" class="contact-icon">
-                    <h2 class="contact-title">Entre em contato</h2>
-                </div>
-
-                <!-- Faixa escura full-bleed -->
-                <div class="contact-band">
-                    <!-- WhatsApp -->
-                    <a class="contact-item"
-                        href="https://wa.me/5534999942302?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
-                        target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
-                        <img src="imagens/whatsapp.png" alt="WhatsApp" class="contact-img">
-                        <span>WhatsApp</span>
-                    </a>
-
-                    <!-- E-mail -->
-                    <a class="contact-item"
-                        href="mailto:isabela-correa@ups.br?subject=Contato%20pelo%20site&body=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20terapia."
-                        aria-label="Enviar e-mail">
-                        <img src="imagens/e-mail.png" alt="E-mail" class="contact-img">
-                        <span>E-mail</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-
-    </main>
-    <footer>
-        <p>Psicóloga Isabela Corrêa | CRM 06/178273 | Todos os direitos reservados ©</p>
-        <p>Desenvolvido por <a href="https://github.com/rafa90hernandez" target="_blank" rel="noopener noreferrer"
-                class="link"><strong>Rafael Hernandez</strong></a></p>
-    </footer>
-    <button id="btnTopo" onclick="voltarAoTopo()"> ↑ </button>
-    <script>
-        window.onscroll = function () {
-            const btn = document.getElementById("btnTopo");
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            }
-        };
-        function voltarAoTopo() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function toggleMenu() {
-            const menu = document.getElementById('menuNav');
-            menu.classList.toggle('show');
-        }
-
-        <!-- JS: ativa a classe .in-view quando a seção aparece -->
-
-        (function () {
-            const section = document.querySelector('.hero-split');
-            if (!('IntersectionObserver' in window) || !section) {
-                // fallback: sem IO, mostra direto
-                section.classList.add('in-view');
-                return;
-            }
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        section.classList.add('in-view');
-                        io.disconnect(); // anima só uma vez
-                    }
-                });
-            }, { threshold: 0.25 });
-            io.observe(section);
-        })();
-
-        (function () {
-            const sec = document.querySelector('.about-split');
-            if (!sec) return;
-            if (!('IntersectionObserver' in window)) { sec.classList.add('in-view'); return; }
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) { sec.classList.add('in-view'); io.disconnect(); }
-                });
-            }, { threshold: 0.25 });
-            io.observe(sec);
-        })();
-
-
-        (function () {
-            const sec = document.querySelector('.work-split');
-            if (!sec) return;
-            if (!('IntersectionObserver' in window)) { sec.classList.add('in-view'); return; }
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) { sec.classList.add('in-view'); io.disconnect(); }
-                });
-            }, { threshold: 0.25 });
-            io.observe(sec);
-        })();
-
-        (function () {
-            const sec = document.querySelector('.cards-split');
-            if (!sec) return;
-            if (!('IntersectionObserver' in window)) { sec.classList.add('in-view'); return; }
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) { sec.classList.add('in-view'); io.disconnect(); }
-                });
-            }, { threshold: 0.2 });
-            io.observe(sec);
-        })();
-
-        (function () {
-            const sec = document.querySelector('.insta-section');
-            if (!sec) return;
-            if (!('IntersectionObserver' in window)) {
-                sec.classList.add('in-view');
-                return;
-            }
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) {
-                        sec.classList.add('in-view');
-                        io.disconnect();
-                    }
-                });
-            }, { threshold: 0.3 });
-            io.observe(sec);
-        })();
-
-        (function () {
-            const sec = document.querySelector('.contact-section');
-            if (!sec) return;
-            if (!('IntersectionObserver' in window)) { sec.classList.add('in-view'); return; }
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) { sec.classList.add('in-view'); io.disconnect(); }
-                });
-            }, { threshold: 0.2 });
-            io.observe(sec);
-        })();
-    </script>
+      selectors.forEach(sel => {
+        const el = document.querySelector(sel);
+        if (el) io.observe(el);
+      });
+    })();
+  </script>
 </body>
-
 </html>

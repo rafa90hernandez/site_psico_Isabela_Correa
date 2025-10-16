@@ -432,10 +432,9 @@ footer p, footer a{ margin:0; text-decoration:none; color:#fff; }
   }
   .card{
     width: 70%;
-    max-width: 540px;
-    min-width: 200px;
+    max-width: 450px;
     height: auto;                    /* deixa crescer conforme o texto */
-    padding: 20px;
+    padding: 15px;
     margin: 0 auto; 
   }
   .card-head{ min-height: 56px; }
@@ -467,6 +466,12 @@ footer p, footer a{ margin:0; text-decoration:none; color:#fff; }
     padding: 16px;
     max-width: 90%;                 /* dá mais respiro nas laterais */
   }
+
+  .card{
+    width: 90%;
+    max-width: 480px;        /* um pouco menor no celular */
+  }
+
   .about-title, .work-title{
     font-size: clamp(1.6rem, 7vw, 2.2rem);
   }

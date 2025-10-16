@@ -389,25 +389,24 @@ footer p, footer a{ margin:0; text-decoration:none; color:#fff; }
   .text-panel, .text-panel2, .text-panel3{ order: 1; }
   .img-panel,  .img-panel2,  .img-panel3 { order: 2; }
 
-  /* ===== Caixas de texto compactas ===== */
-  .text-box{
-    padding: 20px;
-    max-width: 680px;
-    border-radius: 12px;
-    margin: 0 auto;
-  }
-  .about-box{
-    padding: 20px;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 680px;
-  }
-  .work-title{ padding-left: 0; text-align: center; }
+  /* ===== Caixas de texto compactas e centralizadas ===== */
+  .text-box,
+  .about-box,
   .work-box{
     padding: 20px;
     border-radius: 12px;
+    margin: 0 auto;
+    text-align: center;          /* centraliza o texto */
+    justify-content: center;
     width: 100%;
     max-width: 680px;
+  }
+
+  /* Títulos centralizados no mobile */
+  .about-title,
+  .work-title{
+    padding-left: 0;
+    text-align: center;
   }
 
   /* ===== Imagens centralizadas e fluidas ===== */
@@ -462,8 +461,13 @@ footer p, footer a{ margin:0; text-decoration:none; color:#fff; }
 
 /* Telas bem pequenas (<= 600px): aperta um pouco mais */
 @media (max-width: 600px){
-  .text-box, .about-box, .work-box{ padding: 16px; }
-  .about-title, .work-title{ font-size: clamp(1.6rem, 7vw, 2.2rem); }
+  .text-box, .about-box, .work-box{
+    padding: 16px;
+    max-width: 90%;                 /* dá mais respiro nas laterais */
+  }
+  .about-title, .work-title{
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
   .insta-section{ padding: 28px 4vw; }
 }
 

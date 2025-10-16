@@ -431,8 +431,9 @@ footer p, footer a{ margin:0; text-decoration:none; color:#fff; }
     justify-items: center;           /* centraliza a coluna */
   }
   .card{
-    width: 85%;
+    width: 70%;
     max-width: 540px;
+    min-width: 200px;
     height: auto;                    /* deixa crescer conforme o texto */
     padding: 20px;
     margin: 0 auto; 

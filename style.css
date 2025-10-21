@@ -437,8 +437,13 @@ footer p, footer a{ margin:0; text-decoration:none; color:#fff; }
     padding: 15px;
     margin: 0 auto; 
   }
+
+  .card-title{
+    text-align: center;
+    padding-left: 25px;
+  }
   .card-head{ min-height: 56px; }
-  .card-icon{ width: clamp(36px, 10vw, 64px); margin: 0; }
+  .card-icon{ width: clamp(36px, 10vw, 64px); margin: 0; padding-left: 30px;}
   .card-body{ width: 90%; }
 
   /* ===== Animações mobile: de baixo pra cima, mais sutis ===== */

@@ -225,6 +225,7 @@ header{
 .card-title{
   font: 400 clamp(1rem,1.7vw,1.6rem) var(--font16);
   color:#000; letter-spacing:.09em; text-transform:uppercase; line-height:1.2; margin:0;
+  text-align: center;
 }
 .card-body{
   flex:1; width:77%; margin:0 auto;
@@ -250,7 +251,7 @@ header{
 =================================================================== */
 .insta-section{
   background: var(--bg-page);
-  padding: clamp(60px,8vw,100px) 10vw;
+  padding: clamp(0px,2vw,100px) 10vw;
   text-align:center;
   opacity:0; transform: translateY(50px);
   transition: opacity .8s ease, transform .8s cubic-bezier(.22,.9,.22,1);

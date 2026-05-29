@@ -693,13 +693,32 @@ a {
   }
 
   .img-panel {
+    width: 100%;
     min-height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
   }
 
-  .img-panel img,
+  .img-panel img {
+    width: min(86vw, 460px);
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+    margin: 0 auto;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
   .img-panel2 img,
   .img-panel3 img {
     width: min(86vw, 460px);
+    margin: 0 auto;
   }
 }
 

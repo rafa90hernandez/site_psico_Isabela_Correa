@@ -57,6 +57,7 @@ a {
 
 /* HEADER */
 .site-header {
+  position: sticky;
   top: 0;
   z-index: 1000;
   display: flex;
@@ -137,14 +138,14 @@ a {
 }
 
 .menu-dropdown {
-  position: fixed;
-  top: 74px;
-  left: 50%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   z-index: 999;
-  width: min(92vw, 420px);
+  width: 100%;
   max-height: 0;
   overflow: hidden;
-  transform: translateX(-50%);
   border-radius: 0 0 24px 24px;
   background: rgba(253, 243, 250, 0.98);
   box-shadow: var(--shadow-soft);
@@ -735,9 +736,6 @@ a {
     width: 148px;
   }
 
-  .menu-dropdown {
-    top: 67px;
-  }
 
   .text-box,
   .content-box,
